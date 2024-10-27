@@ -240,8 +240,6 @@ export const originSources = {
     name: "哔哩哔哩",
     color: "blue",
     home: "https://www.bilibili.com",
-    // cloudflare pages cannot access
-    // disable: true,
     sub: {
       "hot-search": {
         title: "热搜",
@@ -263,6 +261,7 @@ export const originSources = {
     name: "靠谱新闻",
     column: "world",
     color: "gray",
+    interval: Time.Common,
     desc: "不一定靠谱，多看多思考",
     home: "https://kaopu.news/",
   },
@@ -270,7 +269,15 @@ export const originSources = {
     name: "金十数据",
     column: "finance",
     color: "blue",
+    type: "realtime",
     home: "https://www.jin10.com",
+  },
+  "baidu": {
+    name: "百度热搜",
+    column: "china",
+    color: "blue",
+    type: "hottest",
+    home: "https://www.baidu.com",
   },
 } as const satisfies Record<string, OriginSource>
 
